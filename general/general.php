@@ -27,7 +27,7 @@ function get_redis()
 {
 	$redis = new Redis();
 	$redis->connect('127.0.0.1', 6379);
-	$redis->auth('pilpilon');
+	$redis->auth('redis_password');
 	$redis->select(0);
     return $redis;
 }
