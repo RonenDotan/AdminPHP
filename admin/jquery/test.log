@@ -1,0 +1,10 @@
+<pre>
+
+Function smart_link_rules_tree_post()
+TABLE: smart_link_rules
+POST:
+Array
+(
+    [weight_57] => 1
+)
+SQL: UPDATE smart_link_rules SET weight = '1' WHERE id=57 

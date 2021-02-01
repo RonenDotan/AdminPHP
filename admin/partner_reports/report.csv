@@ -1,0 +1,27 @@
+<script>console.log(`Query:
+	SELECT imp_date,
+    				   SUM(ifnull(imps,0)) as imps,
+					   SUM(ifnull(unique_users,0)) as unique_users,
+    				   SUM(ifnull(clicks,0)) as clicks,
+    				   round((100 * SUM(ifnull(clicks,0)) / greatest(SUM(ifnull(imps,0)),1)),3) as ctr,
+    				   0 as convs,
+					   0 as real_convs,
+    				   0 as cr,
+    				   round(SUM(ifnull(cost,0)),5)   cost_on_imps,
+    				   0 as income,
+     				   0 as real_income,
+    				   0 as epi,
+    				   0 as real_epi,
+    				   0 as epc,
+    				   0 as real_epc,
+					   0 as timelag,
+    			FROM (SELECT * FROM [stats.stats20210126],[stats.stats20210127],[stats.stats20210128],[stats.stats20210129]) as stats_lite
+    			WHERE 1=1 AND ifnull(tag_id,0) != 1 AND ifnull(product_id,0) != 1  AND imp_date BETWEEN '2021-01-26' AND '2021-01-29' 
+    			AND  1=1  AND  1=1 
+    			GROUP BY imp_date
+				
+    			ORDER BY imp_date`);</script><thead><tr><th class='fixed_col_header' style='z-index: 150;'><input type='checkbox' class='header_checkbox' onchange='change_col(this)'><br>All<input type='checkbox' value='all_rows' name='id_checkbox_all' onchange='select_deselect_all(this.checked)'></th>Imp Date,Imps,Unique Users,Clicks,CTR%,Convs,Real Convs,CR%,Cost (CPM Based),Cost,Revenue,ECPM,Real ECPM,EPC,Real EPC,Timelag,
+2021-01-26,108910778,104067659,613076012,<td>562.92% </td>218,267,3.5558396631575E-5,0,155.5287999928474,344.21639996423687,0.0014280386463941,0.003160535681457,0.00025368599806323,0.0005614579484872,0.00000000,
+2021-01-27,96307472,88562829,508260476,<td>527.75% </td>192,219,3.7775906069076E-5,0,130.2634000000001,324.9487999988079,0.0013525783336936,0.0033740767279075,0.00025629260222076,0.00063933517427156,0.00000000,
+2021-01-28,98274632,92254022,533360403,<td>542.72% </td>168,189,3.1498401278957E-5,0,141.58295,410.5574000119208,0.0014406866463769,0.0041776539037248,0.000265454557938,0.00076975605557265,0.00000000,
+2021-01-29,46559451,42674747,217577975,<td>467.31% </td>65,96,2.9874347346049E-5,0,105.04830000000001,287.27410004768376,0.0022562186139179,0.0061700491281069,0.00048280760035569,0.0013203271151305,0.00000000,
