@@ -33,19 +33,8 @@ if (true)
 if ($mod == 'view')
 {
     $fields["title"]=array();
-    $fields["enabled"] = array();
-    $fields["advertiser_platform_url"] = array();
-    $fields["username"] = array();
-    $fields["password"] = array();
-    $fields["add_to_url"] = array();
-    $fields["clicks_cap"] = array();
-    $fields["click_cap_timeframe"] = array();
-    $fields["pixel_ttl"] = array();
-    $fields["allowed_serving_method"] = array();
-    $fields["offers_platform"] = array();
-    $fields["notes"] = array();
-    $fields["password"] = array();
-php -a
+    $fields["field_b"] = array();
+    $fields["field_c"] = array();
 }
 
 
@@ -60,13 +49,13 @@ $fields["title"]["fixed_col"]     = true;
 $fields["title"]["edit_tab"]      = 'general';
 
 
-$fields["advertiser_platform_url"]["name"] = "Advertiser Platform URL";
-$fields["advertiser_platform_url"]["type"]             = 'text';
-$fields["advertiser_platform_url"]["input_name"]   = 'advertiser_platform_url';
-$fields["advertiser_platform_url"]["requierd"]     = 0;
-$fields["advertiser_platform_url"]["db_field"]     = 'advertiser_platform_url';
-$fields["advertiser_platform_url"]["edit_on_view"]  = true;
-$fields["advertiser_platform_url"]["link_url"]      = "{id}";
+$fields["link_url_field"]["name"] = "Link Url Field";
+$fields["link_url_field"]["type"]             = 'text';
+$fields["link_url_field"]["input_name"]   = 'link_url_field';
+$fields["link_url_field"]["requierd"]     = 0;
+$fields["link_url_field"]["db_field"]     = 'link_url_field';
+$fields["link_url_field"]["edit_on_view"]  = true;
+$fields["link_url_field"]["link_url"]      = "{id}";
 
 
 if (true)
@@ -90,6 +79,14 @@ $fields["enabled"]["show_id"] = false;
 $fields["enabled"]["filter"]["defualt"] = 1;
 $fields["enabled"]["edit_on_view"]  = true;
 
+$fields["description"]["name"]          = 'Description';
+$fields["description"]["type"]          = 'textarea';
+$fields["description"]["input_name"]    = 'description';
+$fields["description"]["requierd"]      = 1;
+$fields["description"]["db_field"]      = 'description';
+$fields["description"]['filter']['text_search'] = 'Approximate';
+$fields["description"]["div_filter_2"] = true;
+$fields["description"]["edit_tab"]  = 'general';
 
 $fields["allowed_serving_method"]["name"] = "Allowed Serving Method";
 $fields["allowed_serving_method"]["type"]             = 'text';
