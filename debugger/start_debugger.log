@@ -1,0 +1,45 @@
+<pre>
+
+ - start_debugger.php
+---------------------
+Start Time: 2019-09-16 21:07:17
+
+
+Cron Log Row ID : 131620
+Start Memory Usage: 721704
+Start Memory Peak Usage: 862288
+
+Parameters:
+Array
+(
+)
+GET:
+1
+Uploading For Servers Batch No. 1
+Swap DB Endded Successfully
+
+Swap DB Endded Successfully
+
+Swap DB Endded Successfully
+
+Swap DB Endded Successfully
+
+Swap DB Endded Successfully
+
+Swap DB Endded Successfully
+
+
+Notice: Undefined variable: db_output in /var/www/html/crons/redis_update/rtb_redis_update_v1.php on line 459
+
+
+End Memory Usage: 942296
+End Memory Peak Usage: 1014048
+
+Finish Time: 2019-09-16 21:07:17
+
+Cronjob Duration: 0
+
+
+===========================================
+=            ENDED SUCCESSFULLY           =
+===========================================
