@@ -100,6 +100,21 @@ CREATE TABLE IF NOT EXISTS `user_activity` (
   KEY `module` (`module`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
+
+CREATE TABLE IF NOT EXISTS  `clients` (
+	`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`title` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`system_name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`admin_domain` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`serving_domain` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`theme_path` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`status` TINYINT(3) UNSIGNED NOT NULL DEFAULT '1',
+	PRIMARY KEY (`id`) 
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+// INSERT INTO `clients` (`title`, `system_name`, `admin_domain`, `serving_domain`, `theme_path`, `status`) VALUES ('Le-sha', 'Le-Sha', 'admin.le-sha.com', 'www.serving.mediaodin.com', '/admin/theme/bright_theme.php', 1);
+
+
+
 -- Data exporting was unselected.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
